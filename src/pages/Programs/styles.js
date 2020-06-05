@@ -16,8 +16,9 @@ export const Title = styled.Text`
 `;
 
 export const List = styled.FlatList.attrs({
-  showsVerticalScrollIndicator: false,
+  showsVerticalScrollIndicator: true,
   contentContainerStyle: {padding: 30},
 })`
-  margin-top: 20px;
+  margin-top: 5px;
+  margin-bottom: 45px;
 `;

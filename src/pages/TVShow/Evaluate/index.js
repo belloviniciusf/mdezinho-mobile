@@ -11,6 +11,7 @@ import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
 import api from '../../../services/api';
 import Gif from '../../../assets/P1.gif';
+import gifs from '../../../assets/gifs';
 import BomPng from '../../../assets/icons/bom.png';
 import OtimoPng from '../../../assets/icons/otimo.png';
 import PessimoPng from '../../../assets/icons/pessimo.png';
@@ -124,7 +125,14 @@ export default function Evaluate({navigation}) {
   return (
     <Background>
       <Container>
-        {language === 'libras' && <CentralImage source={Gif} />}
+        {questions.length > 0 && language === 'libras' && (
+          <CentralImage
+            source={
+              gifs.find((gif) => gif.name === questions[indexQuestion].videoRef)
+                .source
+            }
+          />
+        )}
         {loading ? (
           <ActivityIndicator size="large" color="#fff" />
         ) : (
