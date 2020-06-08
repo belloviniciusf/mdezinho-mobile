@@ -21,13 +21,6 @@ export default function Tutorial({navigation}) {
         <ContainerMessage>
           <IconButton
             onPress={() => {
-              handlePress('Menu');
-            }}
-            name="dashboard">
-            Conhecendo o menu fixo
-          </IconButton>
-          <IconButton
-            onPress={() => {
               handlePress('Busca');
             }}
             name="search">

@@ -1,7 +1,7 @@
 import React from 'react';
 import {TouchableWithoutFeedback, View} from 'react-native';
 import Background from '../../components/Background';
-import IntroGif from '../../assets/P1.gif';
+import BemVindoGif from '../../assets/gifs/Bem vindo.gif';
 import UfgdLogo from '../../assets/ufgd-logo.png';
 import GepeticLogo from '../../assets/gepetic.png';
 import {
@@ -24,7 +24,7 @@ export default function AcessibleWelcome({navigation}) {
         <TouchableWithoutFeedback onPress={handlePress}>
           <View>
             <Title>APP-EAL</Title>
-            <CentralImage source={IntroGif} />
+            <CentralImage source={BemVindoGif} />
             <Label>Seja bem-vindo(a)</Label>
             <ContainerLogos>
               <SubImage source={GepeticLogo} />

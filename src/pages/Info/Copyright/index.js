@@ -4,7 +4,7 @@ import {useSelector} from 'react-redux';
 import Background from '../../../components/Background';
 import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
-import Gif from '../../../assets/P1.gif';
+import Gif from '../../../assets/gifs/UsoReproducao.gif';
 import {Container, ContainerMessage, CentralImage, Title} from './styles';
 
 export default function Copyright({navigation}) {

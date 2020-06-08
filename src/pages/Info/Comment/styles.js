@@ -95,3 +95,11 @@ export const ContainerButtons = styled.View`
   align-content: center;
   justify-content: space-between;
 `;
+
+export const CentralImage = styled.Image`
+  align-self: flex-end;
+  width: 200px;
+  height: 100px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+`;

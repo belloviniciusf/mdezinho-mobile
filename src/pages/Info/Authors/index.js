@@ -7,7 +7,7 @@ import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
 import UfgdLogo from '../../../assets/ufgd-logo.png';
 import GepeticLogo from '../../../assets/gepetic.png';
-import Gif from '../../../assets/P1.gif';
+import Gif from '../../../assets/gifs/DireitosAutorais.gif';
 import {
   Container,
   ContainerMessage,

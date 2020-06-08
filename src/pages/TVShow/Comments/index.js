@@ -1,11 +1,11 @@
-import {Alert, TouchableOpacity} from 'react-native';
+import {Alert, TouchableOpacity, Keyboard} from 'react-native';
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
-import Gif from '../../../assets/P1.gif';
+import CommentsGif from '../../../assets/gifs/Comentarios.gif';
 import Background from '../../../components/Background';
 import api from '../../../services/api';
 import {
@@ -74,7 +74,7 @@ export default function Comments({navigation}) {
     <Background>
       <Container>
         {!isVisualization && language === 'libras' && (
-          <CentralImage source={Gif} />
+          <CentralImage source={CommentsGif} />
         )}
         <ContainerTitle positive>
           <Icon name="thumb-up" size={30} color="#fff" />
@@ -93,7 +93,8 @@ export default function Comments({navigation}) {
           }
           value={positiveComment}
           onChangeText={setPositiveComment}
-          returnKeyType="next"
+          returnKeyType="done"
+          onSubmitEditing={Keyboard.dismiss}
         />
         <ContainerTitle>
           <Icon name="thumb-down" size={30} color="#fff" />
@@ -112,7 +113,8 @@ export default function Comments({navigation}) {
           }
           value={negativeComment}
           onChangeText={setNegativeComment}
-          returnKeyType="next"
+          returnKeyType="done"
+          onSubmitEditing={Keyboard.dismiss}
         />
         <SubmitButton
           size={30}

@@ -1,7 +1,6 @@
 import React from 'react';
 import {TouchableWithoutFeedback, View} from 'react-native';
 import Background from '../../components/Background';
-import IntroGif from '../../assets/P1.gif';
 import AppealLogo from '../../assets/appeal.png';
 import {Title, Label, Container, SubImage} from './styles';
 

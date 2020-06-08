@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {useSelector} from 'react-redux';
 import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
-import Gif from '../../../assets/P1.gif';
+import ConfirmarComentariosGif from '../../../assets/gifs/ConfirmarComentarios.gif';
 import api from '../../../services/api';
 import Background from '../../../components/Background';
 import {
@@ -42,7 +42,9 @@ export default function Attention({navigation}) {
   return (
     <Background>
       <Container>
-        {language === 'libras' && <CentralImage source={Gif} />}
+        {language === 'libras' && (
+          <CentralImage source={ConfirmarComentariosGif} />
+        )}
         <ContainerMessage>
           <Label>
             Os comentários poderão ser disponibilizados para a visualização de

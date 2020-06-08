@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
 import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
 import api from '../../../services/api';
-import Gif from '../../../assets/P1.gif';
 import gifs from '../../../assets/gifs';
 import BomPng from '../../../assets/icons/bom.png';
 import OtimoPng from '../../../assets/icons/otimo.png';

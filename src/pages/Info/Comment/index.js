@@ -1,14 +1,17 @@
 import {Alert, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {useSelector} from 'react-redux';
 import BackButton from '../../../components/BackButton';
 import Background from '../../../components/Background';
 import Navbar from '../../../components/Navbar';
+import Gif from '../../../assets/gifs/Mensagem.gif';
 import api from '../../../services/api';
-import {Container, CommentInput, SubmitButton} from './styles';
+import {Container, CommentInput, CentralImage, SubmitButton} from './styles';
 
 export default function Comment({navigation}) {
   const [comment, setComment] = useState('');
+  const language = useSelector((state) => state.user.language);
 
   async function createAnswer() {
     try {
@@ -38,6 +41,7 @@ export default function Comment({navigation}) {
   return (
     <Background>
       <Container>
+        {language === 'libras' && <CentralImage source={Gif} />}
         <CommentInput
           multiline
           numberOfLines={6}

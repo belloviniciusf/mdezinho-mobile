@@ -4,7 +4,7 @@ import {useSelector} from 'react-redux';
 import BackButton from '../../../components/BackButton';
 import Background from '../../../components/Background';
 import Navbar from '../../../components/Navbar';
-import Gif from '../../../assets/P1.gif';
+import Gif from '../../../assets/gifs/FichaTecnica.gif';
 import {
   Container,
   ContainerMessage,

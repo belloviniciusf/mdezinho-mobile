@@ -29,7 +29,6 @@ import Manual from './pages/Info/Manual';
 import Tutorial from './pages/Info/Tutorial';
 import Doubts from './pages/Info/Doubts';
 import Profile from './pages/Profile';
-import Navbar from './components/Navbar';
 import ManualInformation from './pages/Info/ManualInformation';
 import Comment from './pages/Info/Comment';
 

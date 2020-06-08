@@ -11,7 +11,7 @@ export const Container = styled.KeyboardAvoidingView.attrs({
 `;
 
 export const Label = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.9);
   text-align: center;
   margin-bottom: 5px;
@@ -25,7 +25,7 @@ export const ContainerMessage = styled.View`
   padding: 15px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.8);
-  margin: 15px 10px;
+  margin: 15px 5px;
 
   display: flex;
   flex-direction: column;
@@ -36,9 +36,9 @@ export const ContainerMessage = styled.View`
 `;
 
 export const CentralImage = styled.Image`
-  align-self: flex-end;
+  align-self: center;
   padding: 10px;
-  height: 270px;
-  width: 320px;
-  margin: 5px;
+  height: 200px;
+  width: 300px;
+  margin-bottom: 40px;
 `;
