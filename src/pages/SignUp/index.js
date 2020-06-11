@@ -66,7 +66,7 @@ export default function SignUp({navigation}) {
           <ContainerPicker>
             <Icon name="list" size={20} color="rgba(0,0,0,0.6)" />
             <RNPickerSelect
-              placeholder={{label: 'Selecione um tipo'}}
+              placeholder={{label: 'Selecione um perfil'}}
               onValueChange={(value) => setType(value)}
               style={{...pickerSelectStyles}}
               items={[

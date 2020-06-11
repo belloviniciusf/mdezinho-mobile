@@ -55,7 +55,11 @@ export default function SignIn({navigation}) {
             onSubmitEditing={handleSubmit}
           />
 
-          <SubmitButton loading={loading} onPress={() => {}}>
+          <SubmitButton
+            loading={loading}
+            onPress={() => {
+              handleSubmit();
+            }}>
             Acessar
           </SubmitButton>
         </Form>

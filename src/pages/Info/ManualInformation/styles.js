@@ -11,7 +11,7 @@ export const Container = styled.KeyboardAvoidingView.attrs({
 `;
 
 export const Label = styled.Text`
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(0, 0, 0, 0.9);
   text-align: center;
   margin-bottom: 5px;

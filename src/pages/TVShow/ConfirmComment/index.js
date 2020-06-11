@@ -17,20 +17,27 @@ import {
   SubmitButton,
 } from './styles';
 
-export default function Attention({navigation}) {
+export default function ConfirmComment({navigation}) {
   const data = navigation.getParam('data');
   const language = useSelector((state) => state.user.language);
 
   async function handlePress(notAnswered) {
     try {
-      await api.post('answers', {...data, notAnswered, last: true});
+      await api.post('answers', {
+        ...data,
+        tvShowId: data.tvShow._id,
+        notAnswered,
+        last: true,
+      });
 
       Alert.alert(
         'Eba!',
         'Seus comentários foram salvos com sucesso. Muito obrigado.',
       );
 
-      navigation.navigate('Dashboard');
+      navigation.navigate('GeneralEvaluate', {tvShow: data.tvShow});
+
+      // navigation.navigate('Dashboard');
     } catch (err) {
       Alert.alert(
         'Ops!',
@@ -78,14 +85,14 @@ export default function Attention({navigation}) {
   );
 }
 
-Attention.propTypes = {
+ConfirmComment.propTypes = {
   navigation: PropTypes.shape({
     getParam: PropTypes.func,
     navigate: PropTypes.func,
   }).isRequired,
 };
 
-Attention.navigationOptions = ({navigation}) => ({
+ConfirmComment.navigationOptions = ({navigation}) => ({
   title: 'Aviso',
   headerLeft: () => (
     <TouchableOpacity

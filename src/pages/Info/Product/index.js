@@ -1,25 +1,14 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
-import {useSelector} from 'react-redux';
 import BackButton from '../../../components/BackButton';
 import Background from '../../../components/Background';
 import Navbar from '../../../components/Navbar';
-import Gif from '../../../assets/gifs/FichaTecnica.gif';
-import {
-  Container,
-  ContainerMessage,
-  CentralImage,
-  Title,
-  Label,
-} from './styles';
+import {Container, ContainerMessage, Title, Label} from './styles';
 
 export default function Product({navigation}) {
-  const language = useSelector((state) => state.user.language);
-
   return (
     <Background>
       <Container>
-        {language === 'libras' && <CentralImage source={Gif} />}
         <ContainerMessage>
           <Title>Ficha técnica</Title>
           <Label>Formato: Android</Label>

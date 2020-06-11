@@ -30,7 +30,7 @@ export default function Comments({navigation}) {
     try {
       const data = {
         questionId: question._id,
-        tvShowId: tvShow._id,
+        tvShow,
         positiveComment,
         negativeComment,
       };

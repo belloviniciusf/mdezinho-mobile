@@ -19,7 +19,6 @@ const informations = [
     messages: [
       'O Aplicativo para Estudos e Avaliação de Legendas (APP-EAL) tem o objetivo de auxiliar na avaliação e fiscalização das legendas CC na TV aberta, dando oportunidade do usuário visualizar avaliações já feitas por outras pessoas e também realizar avaliações das legendas dos programas que desejar.',
     ],
-    gif: require('../../../assets/gifs/ManualApp.gif'),
   },
   {
     manual: 'Buscar',
@@ -31,7 +30,6 @@ const informations = [
       'A avaliação técnica: detalhamento dos quesitos;',
       'Comentários: relatos deixados pelos usuários.',
     ],
-    gif: require('../../../assets/gifs/ManualBuscar.gif'),
   },
   {
     manual: 'Avaliar',
@@ -42,7 +40,6 @@ const informations = [
       'A avaliação técnica formada por 12 questões sobre as diretrizes que compõem a legenda.',
       'E por fim temos os comentários odne os usuários descrevem os aspectos positivos e negativos da legenda que avaliou.',
     ],
-    gif: require('../../../assets/gifs/ManualAvaliar.gif'),
   },
   {
     manual: 'DuvidaAplicativo',
@@ -50,7 +47,6 @@ const informations = [
     messages: [
       'O aplicativo serve para buscar avaliações de legendas já realizadas por outros usuários e também para que você possa avaliar as legendas dos programas que desejar da TV aberta.',
     ],
-    gif: require('../../../assets/gifs/ParaQueApp.gif'),
   },
   {
     manual: 'DuvidaCC',
@@ -73,7 +69,6 @@ const informations = [
       'Bom (verde)',
       'Ótimo (azul)',
     ],
-    gif: require('../../../assets/gifs/NotasEmoji.gif'),
   },
   {
     manual: 'Busca',

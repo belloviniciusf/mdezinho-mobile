@@ -141,7 +141,7 @@ export default function Evaluate({navigation}) {
                 <Title>{questions[indexQuestion].name}</Title>
               </ContainerTitle>
               <OptionsList
-                style={{flexGrow: 0, flex: 1, minHeight: 200}}
+                style={{flexGrow: 0, flex: 1, minHeight: 180}}
                 data={questions[indexQuestion].options}
                 keyExtractor={(option) => String(option.value)}
                 renderItem={({item: option}) => (

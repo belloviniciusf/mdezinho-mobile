@@ -21,7 +21,7 @@ export const CentralImage = styled.Image`
 `;
 
 export const ContainerTitle = styled.View`
-  padding: 15px;
+  padding: 5px;
   border-radius: 10px;
   background: ${(props) => (props.positive ? '#8bc34a' : '#f44336')};
   margin: 10px 0px;
@@ -52,7 +52,7 @@ export const Name = styled.Text`
 `;
 
 export const SubmitButton = styled(IconButton)`
-  padding: 0 30px;
-  margin: 20px 20px;
+  padding: 0 10px;
+  margin: 10px 20px;
   height: 60px;
 `;

@@ -55,6 +55,10 @@ const gifs = [
     name: 'P14',
     source: require('./P14.gif'),
   },
+  {
+    name: 'Comentarios',
+    source: require('./Comentarios.gif'),
+  },
 ];
 
 export default gifs;

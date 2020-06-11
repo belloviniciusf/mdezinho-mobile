@@ -1,29 +1,23 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
-import {useSelector} from 'react-redux';
 import PropTypes from 'prop-types';
 import Background from '../../../components/Background';
 import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
 import UfgdLogo from '../../../assets/ufgd-logo.png';
 import GepeticLogo from '../../../assets/gepetic.png';
-import Gif from '../../../assets/gifs/DireitosAutorais.gif';
 import {
   Container,
   ContainerMessage,
   ContainerLogos,
-  CentralImage,
   Title,
   SubImage,
 } from './styles';
 
 export default function Authors({navigation}) {
-  const language = useSelector((state) => state.user.language);
-
   return (
     <Background>
       <Container>
-        {language === 'libras' && <CentralImage source={Gif} />}
         <ContainerMessage>
           <Title>
             Este aplicativo foi elaborado, desenvolvido e testado em pesquisa
