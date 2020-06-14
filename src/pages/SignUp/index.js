@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, TouchableOpacity, Dimensions} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import RNPickerSelect from 'react-native-picker-select';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -115,14 +115,11 @@ const pickerSelectStyles = StyleSheet.create({
     fontWeight: '500',
   },
   inputAndroid: {
-    fontSize: 16,
-    paddingHorizontal: 10,
-    paddingVertical: 8,
-    width: 250,
+    fontSize: Dimensions.get('window').height < 600 ? 12 : 16,
+    width: Dimensions.get('window').height < 600 ? 200 : 250,
     borderColor: '#eee',
-    borderRadius: 8,
+    borderRadius: 10,
     color: 'rgba(0, 0, 0, 0.7)',
-    paddingRight: 30, // to ensure the text is never behind the icon
   },
 });
 

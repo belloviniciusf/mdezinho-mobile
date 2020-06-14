@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import IconButton from '../../../components/IconButton';
 
@@ -20,13 +20,13 @@ export const CentralImage = styled.Image`
 `;
 
 export const Label = styled.Text`
-  font-size: 18px;
+  font-size: ${Dimensions.get('window').height < 600 ? '14px' : '18px'};
   text-align: center;
   align-self: center;
 `;
 
 export const ConfirmLabel = styled(Label)`
-  font-size: 22px;
+  font-size: ${Dimensions.get('window').height < 600 ? '18px' : '22px'};
   font-weight: 600;
   margin-top: 10px;
 `;
@@ -54,5 +54,5 @@ export const ContainerMessage = styled.View`
 export const SubmitButton = styled(IconButton)`
   padding: 0 40px;
   margin: 10px 20px;
-  height: 70px;
+  height: ${Dimensions.get('window').height < 700 ? '60px' : '70px'};
 `;

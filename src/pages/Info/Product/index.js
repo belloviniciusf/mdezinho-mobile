@@ -16,6 +16,7 @@ export default function Product({navigation}) {
           <Label>Tecnologia: React Native</Label>
           <Label>Classificação de conteúdo: Livre</Label>
           <Label>Fornecido por: UFGD</Label>
+          <Label>Criadores: Mariana Dezinho e Reinaldo dos Santos</Label>
           <Label>Desenvolvedor: Vinícius Belló</Label>
         </ContainerMessage>
         <Navbar navigation={navigation} />

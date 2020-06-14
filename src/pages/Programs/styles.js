@@ -12,13 +12,13 @@ export const Title = styled.Text`
   text-align: center;
   font-weight: bold;
   align-self: stretch;
-  margin-top: 30px;
+  margin-top: 10px;
 `;
 
 export const List = styled.FlatList.attrs({
   showsVerticalScrollIndicator: true,
-  contentContainerStyle: {padding: 30},
+  contentContainerStyle: {padding: 25},
 })`
-  margin-top: 5px;
-  margin-bottom: 45px;
+  margin-top: 2px;
+  margin-bottom: 50px;
 `;

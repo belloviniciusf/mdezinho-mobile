@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import IconButton from '../../../components/IconButton';
 
@@ -11,14 +11,14 @@ export const Container = styled.KeyboardAvoidingView.attrs({
 `;
 
 export const Title = styled.Text`
-  font-size: 18px;
+  font-size: ${Dimensions.get('window').height < 600 ? '14px' : '18px'};
   color: rgba(0, 0, 0, 0.8);
   font-weight: bold;
   margin-bottom: 15px;
 `;
 
 export const Label = styled.Text`
-  font-size: 16px;
+  font-size: ${Dimensions.get('window').height < 600 ? '14px' : '16px'};
   color: rgba(0, 0, 0, 0.8);
   align-self: center;
   margin-right: 5px;
@@ -27,7 +27,9 @@ export const Label = styled.Text`
 export const OptionsList = styled.FlatList.attrs({
   showsVerticalScrollIndicator: true,
   numColumns: 1,
-})``;
+})`
+  min-height: ${Dimensions.get('window').height < 600 ? '250px' : '330px'};
+`;
 
 export const ContainerMessage = styled.View`
   padding: 15px;
@@ -52,15 +54,18 @@ export const ContainerEvaluate = styled.View`
 `;
 
 export const ImageEvaluate = styled.Image`
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
+  width: ${Dimensions.get('window').height < 600 ? '26px' : '30px'};
+  height: ${Dimensions.get('window').height < 600 ? '26px' : '30px'};
+  border-radius: ${Dimensions.get('window').height < 600 ? '13px' : '15px'};
   margin-bottom: 5px;
   margin-left: auto;
 `;
 
-export const SubmitButton = styled(IconButton)`
+export const SubmitButton = styled(IconButton).attrs({
+  size: Dimensions.get('window').height < 600 ? 20 : 30,
+  fontsize: Dimensions.get('window').height < 600 ? '14px' : '18px',
+})`
   padding: 0 30px;
   margin: 5px;
-  height: 60px;
+  height: ${Dimensions.get('window').height < 600 ? '50px' : '60px'};
 `;

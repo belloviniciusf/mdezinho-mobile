@@ -28,14 +28,14 @@ export default function Doubts({navigation}) {
               handlePress('DuvidaCC');
             }}
             name="subtitles">
-            Onde aciona o CC na televisão?
+            Onde aciona o CC na TV?
           </IconButton>
           <IconButton
             onPress={() => {
               handlePress('DuvidaEmoji');
             }}
             name="insert-emoticon">
-            Que nota corresponde cada emoji?
+            Que nota corresponde cada emoticon?
           </IconButton>
         </ContainerMessage>
         <Navbar navigation={navigation} />

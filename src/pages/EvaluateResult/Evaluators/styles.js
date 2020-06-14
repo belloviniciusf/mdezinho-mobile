@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import {RectButton} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -13,7 +13,7 @@ export const Container = styled.KeyboardAvoidingView.attrs({
   padding: 5px 0px;
 `;
 export const Label = styled.Text`
-  font-size: 20px;
+  font-size: ${Dimensions.get('window').height < 600 ? '16px' : '20px'};
   color: rgba(0, 0, 0, 0.8);
   font-weight: bold;
   align-self: center;
@@ -64,7 +64,7 @@ export const OptionsList = styled.FlatList.attrs({
 export const Option = styled(RectButton)`
   background: #fff;
   border-radius: 4px;
-  padding: 15px 45px;
+  padding: ${Dimensions.get('window').height < 600 ? '8px 36px' : '10px 40px'};
   flex: 1;
   align-items: center;
   margin: 0px 12px 30px;

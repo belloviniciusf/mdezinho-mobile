@@ -80,7 +80,7 @@ export default function GeneralEvaluate({navigation}) {
             {tvShow.name} - {tvShow.date} - {tvShow.broadcaster}
           </Title>
           <OptionsList
-            style={{flexGrow: 0, flex: 1, minHeight: 330}}
+            style={{flexGrow: 0, flex: 1}}
             data={evaluation}
             keyExtractor={(option) => String(option.label)}
             renderItem={({item: e}) => (

@@ -4,15 +4,11 @@ import PropTypes from 'prop-types';
 import {useSelector} from 'react-redux';
 import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
+import CentralImage from '../../../components/CentralImage';
+import Label from '../../../components/Label';
 import Gif from '../../../assets/gifs/AtencaoVideo.gif';
 import Background from '../../../components/Background';
-import {
-  Container,
-  ContainerMessage,
-  Label,
-  CentralImage,
-  SubmitButton,
-} from './styles';
+import {Container, ContainerMessage, SubmitButton} from './styles';
 
 export default function Attention({navigation}) {
   const tvShow = navigation.getParam('tvShow');

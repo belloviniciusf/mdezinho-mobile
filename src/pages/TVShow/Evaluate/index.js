@@ -25,10 +25,9 @@ import {
   ContainerButtons,
   Title,
   OptionsList,
-  Option,
+  CentralImage,
   Avatar,
   Name,
-  CentralImage,
   SubmitButton,
   EndButton,
   Border,
@@ -126,6 +125,7 @@ export default function Evaluate({navigation}) {
       <Container>
         {questions.length > 0 && language === 'libras' && (
           <CentralImage
+            align="flex-end"
             source={
               gifs.find((gif) => gif.name === questions[indexQuestion].videoRef)
                 .source
@@ -141,7 +141,7 @@ export default function Evaluate({navigation}) {
                 <Title>{questions[indexQuestion].name}</Title>
               </ContainerTitle>
               <OptionsList
-                style={{flexGrow: 0, flex: 1, minHeight: 180}}
+                style={{flexGrow: 0, flex: 1}}
                 data={questions[indexQuestion].options}
                 keyExtractor={(option) => String(option.value)}
                 renderItem={({item: option}) => (

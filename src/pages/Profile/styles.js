@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-
+import {Dimensions} from 'react-native';
 import Input from '../../components/Input';
 import IconButton from '../../components/IconButton';
 
@@ -19,12 +19,11 @@ export const FormInput = styled(Input)`
 `;
 
 export const SubmitButton = styled(IconButton)`
-  height: 60px;
+  height: ${Dimensions.get('window').height < 600 ? '50px' : '70px'};
   margin-bottom: 10px;
 `;
 
 export const LogoutButton = styled(IconButton)`
-  height: 60px;
-  padding: 0px;
   margin-top: 2px;
+  height: ${Dimensions.get('window').height < 600 ? '50px' : '70px'};
 `;

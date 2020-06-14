@@ -1,4 +1,3 @@
-import {Platform} from 'react-native';
 import styled from 'styled-components/native';
 import {RectButton} from 'react-native-gesture-handler';
 import Button from '../../../components/Button';
@@ -6,7 +5,7 @@ import SmallButton from '../../../components/SmallButton';
 import Input from '../../../components/Input';
 
 export const Container = styled.KeyboardAvoidingView.attrs({
-  enabled: Platform.OS === 'ios',
+  enabled: true,
   behavior: 'padding',
 })`
   flex: 1;

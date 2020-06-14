@@ -50,7 +50,7 @@ const informations = [
   },
   {
     manual: 'DuvidaCC',
-    title: 'Onde aciona o CC na televisão?',
+    title: 'Onde aciona o CC na TV?',
     messages: [
       'Existem duas formas para ativar a legenda CC:',
       'No próprio controle remoto apertando o botão CC.',
@@ -60,7 +60,7 @@ const informations = [
   },
   {
     manual: 'DuvidaEmoji',
-    title: 'Que nota corresponde cada emoji?',
+    title: 'Que nota corresponde cada emoticon?',
     messages: [
       'As notas da legenda são divididas em 5 conceitos:',
       'Péssimo (vermelho)',

@@ -3,7 +3,7 @@ import axios from 'axios';
 // import {signOut} from '../store/modules/auth/actions';
 
 const baseURL = __DEV__
-  ? `http://192.168.0.11:3333`
+  ? `http://192.168.0.3:3333`
   : 'https://mdezinho.herokuapp.com';
 
 const api = axios.create({

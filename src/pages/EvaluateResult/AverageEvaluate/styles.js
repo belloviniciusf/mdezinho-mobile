@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import IconButton from '../../../components/IconButton';
 
@@ -11,14 +11,14 @@ export const Container = styled.KeyboardAvoidingView.attrs({
 `;
 
 export const Title = styled.Text`
-  font-size: 20px;
+  font-size: ${Dimensions.get('window').height < 600 ? '16px' : '20px'};
   color: rgba(0, 0, 0, 0.8);
   font-weight: bold;
   margin-bottom: 15px;
 `;
 
 export const Label = styled.Text`
-  font-size: 20px;
+  font-size: ${Dimensions.get('window').height < 600 ? '16px' : '20px'};
   color: rgba(0, 0, 0, 0.9);
   align-self: center;
   margin-top: 30px;
@@ -26,7 +26,7 @@ export const Label = styled.Text`
 `;
 
 export const Note = styled.Text`
-  font-size: 22px;
+  font-size: ${Dimensions.get('window').height < 600 ? '18px' : '22px'};
   font-weight: bold;
 `;
 
@@ -53,9 +53,9 @@ export const ContainerEvaluate = styled.View`
 `;
 
 export const ImageEvaluate = styled.Image`
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+  width: ${Dimensions.get('window').height < 600 ? '50px' : '70px'};
+  height: ${Dimensions.get('window').height < 600 ? '50px' : '70px'};
+  border-radius: ${Dimensions.get('window').height < 600 ? '25px' : '35px'};
   margin-top: 10px;
   margin-bottom: 10px;
 `;
@@ -67,10 +67,13 @@ export const ContainerButtons = styled.View`
   justify-content: space-between;
 `;
 
-export const SubmitButton = styled(IconButton)`
+export const SubmitButton = styled(IconButton).attrs({
+  size: Dimensions.get('window').height < 600 ? 20 : 30,
+  fontsize: Dimensions.get('window').height < 600 ? '14px' : '18px',
+})`
   padding: 10px 2px;
   margin: 10px;
-  height: 70px;
+  height: ${Dimensions.get('window').height < 600 ? '60px' : '70px'};
   align-self: center;
   flex: 1;
 `;

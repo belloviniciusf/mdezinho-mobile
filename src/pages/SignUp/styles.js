@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -14,8 +14,8 @@ export const Container = styled.KeyboardAvoidingView.attrs({
 `;
 
 export const ContainerPicker = styled.View`
-  padding: 5px 15px;
-  height: 60px;
+  padding: ${Dimensions.get('window').height < 600 ? '0px 15px' : '5px 15px'};
+  height: ${Dimensions.get('window').height < 600 ? '45px' : '60px'};
   background: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   border: 1px solid #eee;

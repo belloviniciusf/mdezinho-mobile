@@ -12,6 +12,7 @@ import {
   Container,
   ContainerTitle,
   Title,
+  Form,
   CommentInput,
   CentralImage,
   SubmitButton,
@@ -73,55 +74,56 @@ export default function Comments({navigation}) {
   return (
     <Background>
       <Container>
-        {!isVisualization && language === 'libras' && (
-          <CentralImage source={CommentsGif} />
-        )}
-        <ContainerTitle positive>
-          <Icon name="thumb-up" size={30} color="#fff" />
-          <Title>Destaques positivos</Title>
-        </ContainerTitle>
-        <CommentInput
-          editable={!isVisualization}
-          multiline
-          numberOfLines={4}
-          autoCorrect={false}
-          autoCapitalize="none"
-          placeholder={
-            !isVisualization
-              ? 'Escreva de 1 a 3 aspectos que você considera positivo nesta legenda'
-              : ''
-          }
-          value={positiveComment}
-          onChangeText={setPositiveComment}
-          returnKeyType="done"
-          onSubmitEditing={Keyboard.dismiss}
-        />
-        <ContainerTitle>
-          <Icon name="thumb-down" size={30} color="#fff" />
-          <Title>Destaques negativos</Title>
-        </ContainerTitle>
-        <CommentInput
-          editable={!isVisualization}
-          multiline
-          numberOfLines={4}
-          autoCorrect={false}
-          autoCapitalize="none"
-          placeholder={
-            !isVisualization
-              ? 'Escreva de 1 a 3 aspectos que você considera negativo nesta legenda'
-              : ''
-          }
-          value={negativeComment}
-          onChangeText={setNegativeComment}
-          returnKeyType="done"
-          onSubmitEditing={Keyboard.dismiss}
-        />
-        <SubmitButton
-          size={30}
-          name={isVisualization ? 'cancel' : 'check'}
-          onPress={isVisualization ? handlePress : createAnswer}>
-          {isVisualization ? 'Finalizar visualização' : 'Salvar'}
-        </SubmitButton>
+        <Form>
+          {!isVisualization && language === 'libras' && (
+            <CentralImage source={CommentsGif} />
+          )}
+          <ContainerTitle positive>
+            <Icon name="thumb-up" size={30} color="#fff" />
+            <Title>Destaques positivos</Title>
+          </ContainerTitle>
+          <CommentInput
+            editable={!isVisualization}
+            multiline
+            numberOfLines={4}
+            autoCorrect={false}
+            autoCapitalize="none"
+            placeholder={
+              !isVisualization
+                ? 'Escreva de 1 a 3 aspectos que você considera positivo nesta legenda'
+                : ''
+            }
+            value={positiveComment}
+            onChangeText={setPositiveComment}
+            returnKeyType="done"
+            onSubmitEditing={Keyboard.dismiss}
+          />
+          <ContainerTitle>
+            <Icon name="thumb-down" size={30} color="#fff" />
+            <Title>Destaques negativos</Title>
+          </ContainerTitle>
+          <CommentInput
+            editable={!isVisualization}
+            multiline
+            numberOfLines={4}
+            autoCorrect={false}
+            autoCapitalize="none"
+            placeholder={
+              !isVisualization
+                ? 'Escreva de 1 a 3 aspectos que você considera negativo nesta legenda'
+                : ''
+            }
+            value={negativeComment}
+            onChangeText={setNegativeComment}
+            returnKeyType="done"
+            onSubmitEditing={Keyboard.dismiss}
+          />
+          <SubmitButton
+            name={isVisualization ? 'cancel' : 'check'}
+            onPress={isVisualization ? handlePress : createAnswer}>
+            {isVisualization ? 'Finalizar visualização' : 'Salvar'}
+          </SubmitButton>
+        </Form>
         <Navbar navigation={navigation} />
       </Container>
     </Background>

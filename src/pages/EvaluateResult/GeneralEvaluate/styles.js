@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import IconButton from '../../../components/IconButton';
 
@@ -11,14 +11,14 @@ export const Container = styled.KeyboardAvoidingView.attrs({
 `;
 
 export const Title = styled.Text`
-  font-size: 18px;
+  font-size: ${Dimensions.get('window').height < 600 ? '14px' : '18px'};
   color: rgba(0, 0, 0, 0.8);
   font-weight: bold;
   margin-bottom: 15px;
 `;
 
 export const Label = styled.Text`
-  font-size: 20px;
+  font-size: ${Dimensions.get('window').height < 600 ? '16px' : '20px'};
   color: rgba(0, 0, 0, 0.8);
   align-self: center;
 `;
@@ -46,9 +46,9 @@ export const ContainerEvaluate = styled.View`
 `;
 
 export const ImageEvaluate = styled.Image`
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: ${Dimensions.get('window').height < 600 ? '30px' : '50px'};
+  height: ${Dimensions.get('window').height < 600 ? '30px' : '50px'};
+  border-radius: ${Dimensions.get('window').height < 600 ? '15px' : '25px'};
   margin-bottom: 10px;
   margin-left: auto;
 `;
@@ -56,7 +56,7 @@ export const ImageEvaluate = styled.Image`
 export const SubmitButton = styled(IconButton)`
   padding: 10px 2px;
   margin: 10px;
-  height: 70px;
+  height: ${Dimensions.get('window').height < 600 ? '60px' : '70px'};
   align-self: center;
   flex: 1;
 `;

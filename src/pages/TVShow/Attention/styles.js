@@ -9,14 +9,6 @@ export const Container = styled.KeyboardAvoidingView.attrs({
   flex: 1;
   justify-content: center;
   align-items: center;
-  padding: 60px 0px;
-`;
-
-export const CentralImage = styled.Image`
-  align-self: center;
-  width: 250px;
-  height: 150px;
-  margin-bottom: 5px;
 `;
 
 export const Label = styled.Text`

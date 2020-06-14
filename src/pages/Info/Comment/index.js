@@ -1,6 +1,7 @@
-import {Alert, TouchableOpacity} from 'react-native';
+import {Alert, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {Header} from 'react-navigation-stack';
 import BackButton from '../../../components/BackButton';
 import Background from '../../../components/Background';
 import Navbar from '../../../components/Navbar';
@@ -48,6 +49,7 @@ export default function Comment({navigation}) {
           onChangeText={setComment}
           returnKeyType="next"
         />
+
         <SubmitButton onPress={createAnswer}>Enviar mensagem</SubmitButton>
         <Navbar navigation={navigation} />
       </Container>

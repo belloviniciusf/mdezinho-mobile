@@ -1,8 +1,9 @@
 import styled from 'styled-components/native';
+import {Dimensions} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export const Container = styled.View`
-  margin-bottom: 15px;
+  margin-bottom: ${Dimensions.get('window').height < 600 ? '13px' : '15px'};
   padding: 20px;
   border-radius: 4px;
   background: #fff;
@@ -31,7 +32,7 @@ export const Info = styled.View``;
 
 export const Name = styled.Text`
   font-weight: bold;
-  font-size: 16px;
+  font-size: ${Dimensions.get('window').height < 600 ? '14px' : '16px'};
   color: #333;
 `;
 
@@ -41,7 +42,7 @@ export const Date = styled(Name)`
 
 export const Time = styled.Text`
   color: #9e9e9e;
-  font-size: 14px;
+  font-size: ${Dimensions.get('window').height < 600 ? '12px' : '14px'};
   margin-top: 4px;
 `;
 

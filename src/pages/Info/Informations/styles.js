@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import Button from '../../../components/Button';
 
@@ -12,7 +12,7 @@ export const Container = styled.KeyboardAvoidingView.attrs({
 `;
 
 export const Title = styled.Text`
-  font-size: 20px;
+  font-size: ${Dimensions.get('window').height < 600 ? '16px' : '20px'};
   color: rgba(0, 0, 0, 0.8);
   font-weight: bold;
   margin-bottom: 15px;
@@ -57,4 +57,5 @@ export const SubmitButton = styled(Button)`
   padding: 0 30px;
   margin-top: 15px;
   margin-bottom: 5px;
+  height: ${Dimensions.get('window').height < 600 ? '50px' : '70px'};
 `;

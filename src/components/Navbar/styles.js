@@ -3,9 +3,9 @@ import NavButton from '../NavButton';
 
 export const Container = styled.View`
   border-radius: 4px;
-  align-items: center;
-  justify-content: center;
   margin: 5px;
+  align-self: stretch;
+  flex: 1;
   flex-direction: row;
   position: absolute;
   bottom: 0;
@@ -18,7 +18,7 @@ export const Text = styled.Text`
 `;
 
 export const Button = styled(NavButton)`
-  width: 73px;
+  flex: 1;
   align-self: center;
   height: 50px;
 `;
