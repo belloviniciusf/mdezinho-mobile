@@ -64,8 +64,9 @@ export const OptionsList = styled.FlatList.attrs({
 export const Option = styled(RectButton)`
   background: #fff;
   border-radius: 4px;
-  padding: ${Dimensions.get('window').height < 600 ? '8px 36px' : '10px 40px'};
-  flex: 1;
+  padding: ${Dimensions.get('window').height < 600 ? '8px 36px' : '15px 50px'};
+  width: 90px;
+  display: flex;
   align-items: center;
   margin: 0px 12px 30px;
 `;
@@ -73,7 +74,7 @@ export const Option = styled(RectButton)`
 export const Name = styled.Text`
   margin-top: 5px;
   font-size: 13px;
-  width: 70px;
+  width: 90px;
   font-weight: bold;
   color: #000;
   text-align: center;

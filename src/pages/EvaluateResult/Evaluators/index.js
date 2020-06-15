@@ -54,7 +54,7 @@ export default function Evaluators({navigation}) {
                       handlePress(evaluator);
                     }}>
                     <IconPerson size={30} color="#000" />
-                    <Name>{evaluator.userName}</Name>
+                    <Name>{`Colaborador ${index + 1}`}</Name>
                   </Option>
                 )}
               />
