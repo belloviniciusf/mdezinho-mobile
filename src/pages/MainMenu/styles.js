@@ -57,6 +57,6 @@ export const ContainerButtons = styled.View`
 
 export const Button = styled(IconButton)`
   flex: 1;
-  padding: 0 5px;
-  margin: 20px;
+  padding: 5px;
+  margin: 13px;
 `;

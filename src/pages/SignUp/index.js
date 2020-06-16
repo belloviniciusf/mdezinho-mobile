@@ -80,7 +80,7 @@ export default function SignUp({navigation}) {
           <FormInput
             icon="lock-outline"
             secureTextEntry
-            placeholder="Sua senha secreta"
+            placeholder="Sua senha"
             value={password}
             onChangeText={setPassword}
             ref={passwordRef}
