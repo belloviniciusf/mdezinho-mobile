@@ -7,7 +7,7 @@ const baseURL = __DEV__
   : 'https://mdezinho.herokuapp.com';
 
 const api = axios.create({
-  baseURL,
+  baseURL: 'https://mdezinho.herokuapp.com',
 });
 
 // api.interceptors.response.use(

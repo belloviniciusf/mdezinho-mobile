@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {TouchableWithoutFeedback, View} from 'react-native';
 import Background from '../../components/Background';
 import BemVindoGif from '../../assets/gifs/Bemvindo.gif';
@@ -17,6 +17,12 @@ export default function AcessibleWelcome({navigation}) {
   const handlePress = () => {
     navigation.navigate('SelectLanguage');
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('SelectLanguage');
+    }, 5000);
+  }, []);
 
   return (
     <Background>

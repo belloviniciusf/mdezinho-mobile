@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import BackButton from '../../../components/BackButton';
 import Navbar from '../../../components/Navbar';
 import CommentsGif from '../../../assets/gifs/Comentarios.gif';
@@ -83,9 +84,9 @@ export default function Comments({navigation}) {
             <Title>Destaques positivos</Title>
           </ContainerTitle>
           <CommentInput
-            editable={!isVisualization}
+            editable
             multiline
-            numberOfLines={4}
+            numberOfLines={10}
             autoCorrect={false}
             autoCapitalize="none"
             placeholder={
@@ -94,7 +95,7 @@ export default function Comments({navigation}) {
                 : ''
             }
             value={positiveComment}
-            onChangeText={setPositiveComment}
+            onChangeText={!isVisualization ? setPositiveComment : () => {}}
             returnKeyType="done"
             onSubmitEditing={Keyboard.dismiss}
           />
@@ -103,10 +104,12 @@ export default function Comments({navigation}) {
             <Title>Destaques negativos</Title>
           </ContainerTitle>
           <CommentInput
-            editable={!isVisualization}
+            editable
             multiline
-            numberOfLines={4}
+            scrollEnabled
+            numberOfLines={10}
             autoCorrect={false}
+            onContentSizeChange={() => {}}
             autoCapitalize="none"
             placeholder={
               !isVisualization
@@ -114,7 +117,7 @@ export default function Comments({navigation}) {
                 : ''
             }
             value={negativeComment}
-            onChangeText={setNegativeComment}
+            onChangeText={!isVisualization ? setNegativeComment : () => {}}
             returnKeyType="done"
             onSubmitEditing={Keyboard.dismiss}
           />
